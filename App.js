@@ -10,6 +10,7 @@ import { GlobalStyles } from "./constants/styles";
 import { Ionicons } from "@expo/vector-icons";
 import { color } from "react-native-reanimated";
 import IconButton from "./components/UI/IconButton";
+import ExpensesContextProvider from "./store/expenses-context";
 
 const Stack = createStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -70,6 +71,7 @@ export default function App() {
   return (
     <>
       <StatusBar style="dark" />
+      <ExpensesContextProvider>
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
@@ -90,6 +92,7 @@ export default function App() {
           }} />
         </Stack.Navigator>
       </NavigationContainer>
+      </ExpensesContextProvider>
     </>
   );
 }
