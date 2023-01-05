@@ -15,6 +15,7 @@ import ExpensesContextProvider from "./store/expenses-context";
 const Stack = createStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
+// The expense Navigator
 const ExpenseOverview = () => {
   return (
     <>
@@ -67,6 +68,7 @@ const ExpenseOverview = () => {
   );
 };
 
+// The default App Function
 export default function App() {
   return (
     <>
